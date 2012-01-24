@@ -26,7 +26,7 @@
 #define HAVE_ARPA_INET_H 1
 
 /* Define to 1 if you have the <byteswap.h> header file. */
-#define HAVE_BYTESWAP_H 1
+/* #undef HAVE_BYTESWAP_H */
 
 /* Define to 1 if you have the `inet_aton' function. */
 #define HAVE_INET_ATON 1
@@ -47,13 +47,16 @@
 /* #undef HAVE_LIBSOCKET */
 
 /* Define to 1 if you have the <machine/types.h> header file. */
-/* #undef HAVE_MACHINE_TYPES_H */
+#define HAVE_MACHINE_TYPES_H 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the <netinet/in.h> header file. */
 #define HAVE_NETINET_IN_H 1
+
+/* Define to 1 if you have the `sigaction' function. */
+#define HAVE_SIGACTION 1
 
 /* Define to 1 if you have the `socket' function. */
 #define HAVE_SOCKET 1
@@ -131,11 +134,7 @@
 #define PACKAGE_VERSION ""
 
 /* The size of a `unsigned long', as computed by sizeof. */
-#if defined(__GNUC__) && defined(__LP64__)
-#define SIZEOF_UNSIGNED_LONG 8
-#else
 #define SIZEOF_UNSIGNED_LONG 4
-#endif
 
 /* The size of a `unsigned long long', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_LONG_LONG 8
@@ -173,28 +172,3 @@
 
 /* Define to `unsigned' if <sys/types.h> does not define. */
 /* #undef size_t */
-
-/* Adjustments to build under MSVC. */
-#if defined(WIN32)
-#undef DEV_URANDOM
-#undef HAVE_BYTESWAP_H
-#undef HAVE_INT16_T
-#undef HAVE_INT32_T
-#undef HAVE_INT8_T
-#undef HAVE_INTTYPES_H
-#undef HAVE_UINT16_T
-#undef HAVE_UINT32_T
-#undef HAVE_UINT64_T
-#undef HAVE_UINT8_T
-#undef HAVE_NETINET_IN_H
-#define HAVE_WINSOCK2_H
-#undef HAVE_STDINT_H
-#ifndef __cplusplus
-#define inline
-#endif
-typedef short int16_t;
-/* Adjustments to build on MacOS. */
-#elif defined(OSX)
-#undef DEV_URANDOM
-#undef HAVE_BYTESWAP_H
-#endif
