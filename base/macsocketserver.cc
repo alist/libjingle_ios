@@ -197,6 +197,8 @@ void MacCFSocketServer::OnWakeUpCallback() {
 // MacCarbonSocketServer
 ///////////////////////////////////////////////////////////////////////////////
 
+#ifndef iOS
+
 const UInt32 kEventClassSocketServer = 'MCSS';
 const UInt32 kEventWakeUp = 'WAKE';
 const EventTypeSpec kEventWakeUpSpec[] = {
@@ -277,12 +279,14 @@ void MacCarbonSocketServer::WakeUp() {
   }
 }
 
+#endif
+
 ///////////////////////////////////////////////////////////////////////////////
 // MacCarbonAppSocketServer
 ///////////////////////////////////////////////////////////////////////////////
 
 // Carbon is deprecated for x64.  Switch to Cocoa
-#if !defined(__x86_64__)
+#if !defined(__x86_64__) && !defined(iOS)
 
 MacCarbonAppSocketServer::MacCarbonAppSocketServer()
     : event_queue_(GetCurrentEventQueue()) {
