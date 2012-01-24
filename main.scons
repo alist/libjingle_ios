@@ -314,7 +314,7 @@ mac_env = posix_env.Clone(
 
 mac_env.Append(
   CPPDEFINES = [
-    'OSX',
+    'iOS',
   ],
   CCFLAGS = [
     '-m32',
@@ -336,16 +336,19 @@ mac_env.Append(
     '-dead_strip',
   ],
   FRAMEWORKS = [
-    'CoreServices',
+#    'CoreServices',
 #    'Carbon',
     'Security',
     'SystemConfiguration',
-    'OpenGL',
-    'CoreAudio',
-    'Quartz',
-    'QuickTime',
-    'Cocoa',
-    'QTKit',
+    'Foundation',
+    'CFNetwork'
+    'UIKit',
+    'CoreFoundation',
+#    'OpenGL',
+#    'CoreAudio',
+#    'Quartz',
+#    'Cocoa',
+#    'QTKit',
   ]
 )
 
