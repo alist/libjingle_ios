@@ -100,8 +100,8 @@ mkdir-init:
 		(mkdir $$d 2> /dev/null || test 1) ; \
 	done
 
-CC = gcc
-CXX = g++
+CC = /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2
+CXX = /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/g++-4.2
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 
 INCLUDES = -I$(srcdir)/lib -I.
