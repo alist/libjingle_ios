@@ -4,6 +4,7 @@ Import("env")
 talk.Library(env, name = "expat",
              cppdefines = [
                "XML_STATIC",
+	       "HAS_OPENSSL_1_0",
              ],
              srcs = [
                "third_party/expat-2.0.1/lib/xmlparse.c",
