@@ -319,7 +319,7 @@ mac_env.Append(
   ],
   CCFLAGS = [
     '-arch', 'armv6',
-    '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk',
+    '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk',
   ],
   LINKFLAGS = [
     '-Wl,-search_paths_first',
@@ -330,7 +330,7 @@ mac_env.Append(
     '-ObjC',
     '-arch', 'armv6',
     '-miphoneos-version-min=3.2',
-    '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk',
+    '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk',
     '-dead_strip',
   ],
   FRAMEWORKS = [

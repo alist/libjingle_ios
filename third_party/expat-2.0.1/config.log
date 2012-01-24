@@ -30,8 +30,8 @@ Kernel configured for up to 4 processors.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3
 Primary memory available: 4.00 gigabytes
-Default processor set: 158 tasks, 770 threads, 4 processors
-Load average: 1.31, Mach factor: 2.76
+Default processor set: 164 tasks, 796 threads, 4 processors
+Load average: 1.06, Mach factor: 2.93
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -977,7 +977,6 @@ on airtight.local
 
 config.status:683: creating Makefile
 config.status:787: creating expat_config.h
-config.status:917: expat_config.h is unchanged
 
 ## ---------------- ##
 ## Cache variables. ##
