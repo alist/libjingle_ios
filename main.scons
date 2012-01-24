@@ -319,8 +319,8 @@ mac_env.Append(
   ],
   CCFLAGS = [
     '-m32',
-    '-arch', 'i386',
-    '-isysroot', '/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk',
+    '-arch', 'armv6',
+    '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk',
     '-fasm-blocks',
   ],
   LINKFLAGS = [
@@ -330,9 +330,9 @@ mac_env.Append(
     # Obj-C categories aren't properly included in the exe.
     # TODO: consider only defining for libs that actually have objc.
     '-ObjC',
-    '-arch', 'i386',
+    '-arch', 'armv6',
     '-miphoneos-version-min=3.2',
-    '-isysroot', '/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk',
+    '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk',
     '-m32',
     '-dead_strip',
   ],
