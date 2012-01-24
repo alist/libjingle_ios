@@ -315,6 +315,7 @@ mac_env = posix_env.Clone(
 mac_env.Append(
   CPPDEFINES = [
     'iOS',
+    'IOS'
   ],
   CCFLAGS = [
     '-m32',
