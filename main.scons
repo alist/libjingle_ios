@@ -297,7 +297,7 @@ posix_env.Append(
   CXXFLAGS = [
     '-Wno-non-virtual-dtor',
     '-Wno-ctor-dtor-privacy',
-    '-fno-rtti',
+#    '-fno-rtti',
   ],
 )
 
