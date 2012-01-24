@@ -311,6 +311,7 @@ mac_env = posix_env.Clone(
     #'fill_plist',
   ],
 )
+
 mac_env.Append(
   CPPDEFINES = [
     'OSX',
@@ -318,7 +319,7 @@ mac_env.Append(
   CCFLAGS = [
     '-m32',
     '-arch', 'i386',
-    '-isysroot', '/Developer/SDKs/MacOSX10.5.sdk',
+    '-isysroot', '/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk',
     '-fasm-blocks',
   ],
   LINKFLAGS = [
@@ -347,6 +348,9 @@ mac_env.Append(
     'QTKit',
   ]
 )
+
+mac_env.Replace(CC = '/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2')
+mac_env.Replace(CXX = '/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/g++-4.2')
 
 mac_dbg_env = mac_env.Clone(
   BUILD_TYPE = 'dbg',
