@@ -37,7 +37,7 @@
 #include <errno.h>
 #include <math.h>
 #include <sys/time.h>
-#if defined(OSX)
+#if defined(OSX) || defined(iOS)
 #include <mach/mach.h>
 #include <mach/clock.h>
 #endif
@@ -86,7 +86,7 @@ double Timing::WallTimeNow() {
 }
 
 double Timing::TimerNow() {
-#if defined(OSX)
+#if defined(OSX) || defined(iOS)
   // No clock_gettime on OSX.
   clock_serv_t clock;
   mach_timespec_t time;
