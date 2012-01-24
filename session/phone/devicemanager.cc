@@ -103,6 +103,7 @@ bool DeviceManager::GetVideoCaptureDevices(std::vector<Device>* devices) {
   // multiple cameras, that's abstracted away at a higher level.
   Device dev("camera", "1");    // name and ID
   devices->push_back(dev);
+  return true;
 #else
   return false;
 #endif
