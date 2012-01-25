@@ -320,8 +320,6 @@ mac_env.Append(
   CCFLAGS = [
     '-arch', 'armv6',
     '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk',
-#    '-I','/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/c++/4.2.1/',
-#    '-I','/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/c++/4.2.1/tr1/',
   ],
   LINKFLAGS = [
     '-Wl,-search_paths_first',
