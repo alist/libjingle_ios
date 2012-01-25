@@ -320,6 +320,8 @@ mac_env.Append(
   CCFLAGS = [
     '-arch', 'armv6',
     '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk',
+#    '-I','/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/c++/4.2.1/',
+#    '-I','/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/c++/4.2.1/tr1/',
   ],
   LINKFLAGS = [
     '-Wl,-search_paths_first',
@@ -350,8 +352,8 @@ mac_env.Append(
   ]
 )
 
-mac_env.Replace(CC = '/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2')
-mac_env.Replace(CXX = '/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/g++-4.2')
+mac_env.Replace(CC = '/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/llvm-gcc-4.2')
+mac_env.Replace(CXX = '/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/llvm-g++-4.2')
 
 mac_dbg_env = mac_env.Clone(
   BUILD_TYPE = 'dbg',
