@@ -318,7 +318,7 @@ mac_env.Append(
     'IOS'
   ],
   CCFLAGS = [
-    '-arch', 'armv6',
+    '-arch', 'armv7',
     '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk',
   ],
   LINKFLAGS = [
