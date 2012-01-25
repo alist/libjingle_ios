@@ -328,7 +328,7 @@ mac_env.Append(
     # Obj-C categories aren't properly included in the exe.
     # TODO: consider only defining for libs that actually have objc.
     '-ObjC',
-    '-arch', 'armv6',
+    '-arch', 'armv7',
     '-miphoneos-version-min=3.2',
     '-isysroot', '/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk',
     '-dead_strip',
@@ -339,7 +339,7 @@ mac_env.Append(
     'Security',
     'SystemConfiguration',
     'Foundation',
-    'CFNetwork'
+    'CFNetwork',
     'UIKit',
     'CoreFoundation',
 #    'OpenGL',
